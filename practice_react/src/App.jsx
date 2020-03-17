@@ -17,7 +17,6 @@ function App() {
         <Route path='/rooms/:slug' exact component={SingleRoom} />
         <Route  exact component={Error} />
       </Switch>
-      
     </>
   );
 }

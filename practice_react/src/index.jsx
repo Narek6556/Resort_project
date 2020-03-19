@@ -2,12 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter as Router} from 'react-router-dom';
 import App from './App';
+import { createStore } from "redux";
+import rootReducer from '../src/store/reducers/rootReducer';
+import {Provider} from 'react-redux';
 
+const store = createStore(rootReducer)
+
+const app = (
+    <Provider store = {store}>
+        <Router>
+            <App />
+        </Router>
+    </Provider>
+)
 
 ReactDOM.render(
-    <Router>
-        <App />
-    </Router>
+    app
     , document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

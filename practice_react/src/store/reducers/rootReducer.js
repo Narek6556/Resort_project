@@ -7,7 +7,9 @@ function formatData(items) {
 
         let images = item.fields.images.map(image => image.fields.file.url);
 
-        let room = {...item.fields, images, id};
+        let slug = item.fields.slug;
+
+        let room = {...item.fields, images, id, slug};
 
         return room;
     });
@@ -15,18 +17,12 @@ function formatData(items) {
 }
 
 
-
-
-
-
 const initialState = { 
-    allRooms: data,
+    allRooms: formatData(data),
     featuredRooms: formatData(data).filter(room => room.featured === true),
     sortedRooms: [],
     loading: false
 }
-
-
 
 export default function rootReducer(state = initialState, action) { 
     switch (action.type) { 

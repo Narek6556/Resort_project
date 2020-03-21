@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 function Room({room}) {
 
-    const {images, price, slug, name} = room
+    const {images, price, slug, name} = room;
     //  console.log(room)
     
 

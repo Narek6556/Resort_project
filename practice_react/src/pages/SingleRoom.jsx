@@ -1,19 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import defaultBcg from '../images/room-1.jpeg';
-import { FaDivide } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import Hero from '../components/Hero';
 import Banner from '../components/Banner';
 import StyledHero from '../components/StyledHero';
 
 class SingleRoom extends React.Component { 
-
-    constructor(props) {
-        super(props);
-        //console.log(this.props);
-    }
-
 
 
     getRoom(slug) { 
@@ -25,11 +17,11 @@ class SingleRoom extends React.Component {
 
     render() { 
 
-        //let slug = this.props.match.params.slug;
+        
 
         let room = this.getRoom(this.props.match.params.slug);
 
-        console.log(room);
+        
 
         if(!room) { 
             return ( 

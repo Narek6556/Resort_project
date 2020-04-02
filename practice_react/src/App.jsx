@@ -6,8 +6,8 @@ import Error from './pages/Error';
 import {Switch,Route} from 'react-router-dom';
 import Navbar from '../src/components/Navbar'
 import './App.css';
-import {connect} from 'react-redux';
-
+import { connect } from 'react-redux';
+import {store} from '../src/store/reducers/store';
 
 class App extends React.Component{
 
@@ -34,4 +34,6 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps)(App);
+const newComponent = connect(mapStateToProps)(App);
+export default newComponent;
+

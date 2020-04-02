@@ -8,6 +8,7 @@ import StyledHero from '../components/StyledHero';
 class SingleRoom extends React.Component { 
 
 
+
     getRoom(slug) { 
         let tempRooms = [...this.props.allRooms];
         const room = tempRooms.find( room => room.slug === slug);
@@ -93,8 +94,7 @@ class SingleRoom extends React.Component {
 
 function mapStateToProps(state) { 
     return { 
-        allRooms: state.allRooms,
-        featuredRooms: state.featuredRooms,
+        allRooms: state.data.allRooms,
         defaultBcg: defaultBcg
     }
 }

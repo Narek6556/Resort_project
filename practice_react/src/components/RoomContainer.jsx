@@ -14,7 +14,7 @@ function RoomContainer({...props}) {
 
     return (
         <div>
-            Hello from Room Container
+            
             <RoomFilter rooms = {allRooms}/>
             <RoomList rooms = {sortedRooms}/>
             
@@ -26,9 +26,9 @@ function RoomContainer({...props}) {
 
 function mapStateToProps(state) { 
     return { 
-        allRooms: state.allRooms,
-        loading: state.loading,
-        sortedRooms: state.sortedRooms
+        allRooms: state.data.allRooms,
+        loading: state.data.loading,
+        sortedRooms: state.data.sortedRooms
       }
 }
 

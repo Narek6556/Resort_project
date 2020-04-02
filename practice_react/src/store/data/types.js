@@ -1,0 +1,2 @@
+export const ADD_SORTED_ROOMS = 'DATA/ADD_SORTED_ROOMS';
+

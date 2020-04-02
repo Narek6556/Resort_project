@@ -3,8 +3,8 @@ import Title from '../components/Title'
 import { connect } from 'react-redux';
 import Loading from '../components/Loading';
 import Room from './Room';
-
-
+import formatData from '../helpers/formatData';
+import data from '../data';
 
 class FeaturedRooms extends Component {
     
@@ -36,6 +36,7 @@ class FeaturedRooms extends Component {
         // let rooms = [...this.props.featuredRooms];
          let { loading, featuredRooms:rooms } = this.props
         
+         console.log(this.props);
         rooms = rooms.map( room => { 
             return <Room key={room.id} room={room} />
         });
@@ -55,9 +56,9 @@ class FeaturedRooms extends Component {
 
 function mapStateToProps(state) { 
     return { 
-      allRooms: state.allRooms,
-      featuredRooms: state.featuredRooms,
-      loading: state.loading
+      allRooms: state.data.allRooms,
+      featuredRooms: [...formatData(data).filter(room => room.featured === true)],
+      loading: state.data.loading
     }
 }
 

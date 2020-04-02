@@ -8,10 +8,11 @@ import FeaturedRooms from '../components/FeaturedRooms';
 
 const Home = () => { 
 
+    console.log()
     return (
         <>
             <Hero hero = 'defaultHero'> 
-                <Banner title = 'luxurious rooms' subtitle = 'delux rooms starting at $299' >
+                <Banner title = 'luxurious rooms' subtitle = 'delux rooms starting at 299$' >
                     <Link to = '/rooms' className = 'btn-primary'>
                         our rooms
                     </Link>

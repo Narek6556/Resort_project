@@ -1,4 +1,4 @@
-import { changeType } from './action'; 
+
 import data from '../../data';
 import formatData from '../../helpers/formatData';
 import { CHANGE_TYPE } from './type';

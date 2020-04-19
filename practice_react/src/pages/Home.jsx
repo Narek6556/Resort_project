@@ -8,7 +8,7 @@ import FeaturedRooms from '../components/FeaturedRooms';
 
 const Home = () => { 
 
-    console.log()
+   
     return (
         <>
             <Hero hero = 'defaultHero'> 

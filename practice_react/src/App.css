@@ -107,11 +107,23 @@ h6 {
   cursor: pointer;
   outline: none;
 }
+.nav-butn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
 .nav-icon {
   font-size: 1.5rem;
   color: var(--primaryColor);
 }
 .nav-links {
+  height: 0;
+  overflow: hidden;
+  transition: var(--mainTransition);
+  list-style-type: none;
+}
+.nav-link {
   height: 0;
   overflow: hidden;
   transition: var(--mainTransition);
@@ -131,11 +143,25 @@ h6 {
 .nav-links a:hover {
   color: var(--primaryColor);
 }
+.nav-link a {
+  display: block;
+  text-decoration: none;
+  padding: 1rem 0;
+  color: var(--mainBlack);
+  transition: var(--mainTransition);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: var(--mainSpacing);
+}
+.nav-link a:hover {
+  color: var(--primaryColor);
+}
 
 .show-nav {
   height: 100px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1025px) {
   .nav-btn {
     display: none;
   }
@@ -151,6 +177,15 @@ h6 {
   }
   .nav-links a {
     margin: 0 1rem;
+    padding: 0.5rem 0;
+  }
+  .nav-link {
+    height: auto;
+    display: flex;
+    margin-left: 40rem;
+  }
+  .nav-link a {
+    margin: 0 0.2rem;
     padding: 0.5rem 0;
   }
 }
@@ -334,13 +369,21 @@ h6 {
 }
 .room-link {
   position: absolute;
-  top: 50%;
+  top: 30%;
+  left: 50%;
+  transform: scale(0);
+  transition: all 0.3s linear;
+}
+.room-links {
+  position: absolute;
+  top: 60%;
   left: 50%;
   transform: scale(0);
   transition: all 0.3s linear;
 }
 .img-container:hover {
   background: rgba(0, 0, 0, 0.8);
+  
 }
 .img-container:hover img {
   opacity: 0.3;
@@ -350,6 +393,13 @@ h6 {
 }
 .img-container:hover .room-link {
   transform: translate(-50%, -50%) scale(1);
+  display: flex;
+  align-items: center;
+}
+.img-container:hover .room-links {
+  transform: translate(-50%, -50%) scale(1);
+  display: flex;
+  align-items: center;
 }
 .room-info {
   background: var(--darkGrey);

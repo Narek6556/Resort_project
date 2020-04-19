@@ -55,7 +55,7 @@ class  RoomFilter extends React.Component{
         }
         
         this.props.addSortedRooms(tempRooms);
-        //this.props.addGuestsSortedRooms(tempRooms);
+        
     }
 
 
@@ -73,9 +73,7 @@ class  RoomFilter extends React.Component{
     
     
     
-    // getUnigue(items, value) { 
-    //     return [...new Set(items.map(item => item[value]))]
-    // }
+   
     
     
     render() { 
@@ -201,7 +199,7 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) { 
     return { 
         addSortedRooms: (filteredRooms) => dispatch(addSortedRooms(filteredRooms)),
-        //addGuestsSortedRooms: (filtredRooms) => dispatch(addGuestsSortedRooms(filtredRooms))
+        
     }
 }
 
